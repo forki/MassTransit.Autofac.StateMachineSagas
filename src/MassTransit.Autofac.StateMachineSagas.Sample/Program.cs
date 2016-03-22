@@ -1,6 +1,5 @@
 ﻿using System;
 using Autofac;
-using Automatonymous;
 using MassTransit.Autofac.StateMachineSagas.Sample.Elements;
 using MassTransit.AutofacIntegration;
 using MassTransit.Saga;
@@ -12,7 +11,7 @@ namespace MassTransit.Autofac.StateMachineSagas.Sample
         static void Main()
         {
             var builder = new ContainerBuilder();
-            builder.RegisterType<TestSagaStateMachine>().AsImplementedInterfaces().AsSelf().SingleInstance();
+            builder.RegisterSagaStateMachines(typeof(TestSagaStateMachine).Assembly);
             builder.RegisterGeneric(typeof (InMemorySagaRepository<>)).As(typeof(ISagaRepository<>));
             var container = builder.Build();
 

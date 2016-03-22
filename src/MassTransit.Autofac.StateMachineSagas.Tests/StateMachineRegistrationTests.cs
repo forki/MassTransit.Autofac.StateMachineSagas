@@ -18,7 +18,7 @@ namespace MassTransit.Autofac.StateMachineSagas.Tests
             TestDataCollector.Data.Clear();
 
             var builder = new ContainerBuilder();
-            builder.RegisterType<TestSagaStateMachine>().AsImplementedInterfaces().AsSelf().SingleInstance();
+            builder.RegisterSagaStateMachines(typeof(TestSagaStateMachine).Assembly);
             builder.RegisterGeneric(typeof (InMemorySagaRepository<>)).As(typeof(ISagaRepository<>));
             var container = builder.Build();
 

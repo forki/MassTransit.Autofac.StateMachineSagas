@@ -1,0 +1,12 @@
+﻿type project
+authors
+	Alexey Zimarev
+	Chris Patterson
+	Dru Sellers
+	Travis Smith
+owner alexey_zimarev
+description
+	Autofac registration and configuration adapter for Automatonymous state machine Sagas
+licenseUrl https://github.com/alexeyzimarev/MassTransit.Autofac.StateMachineSagas/blob/master/LICENSE
+projectUrl https://github.com/alexeyzimarev/MassTransit.Autofac.StateMachineSagas
+tags MassTransit Autofac Automatonymous
