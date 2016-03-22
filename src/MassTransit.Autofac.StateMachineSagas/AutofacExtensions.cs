@@ -20,6 +20,14 @@ namespace MassTransit.AutofacIntegration
                 ConsumerConfiguratorCache.Configure(concreteType, configurator, scope, name);
         }
 
+        public static void LoadConsumers(this IReceiveEndpointConfigurator configurator, IComponentContext context,
+            string name = "message")
+        {
+            var scope = context.Resolve<ILifetimeScope>();
+
+            LoadConsumers(configurator, scope, name);
+        }
+
         public static void LoadStateMachineSagas(this IReceiveEndpointConfigurator configurator, ILifetimeScope scope,
            string name = "message")
         {
@@ -33,6 +41,14 @@ namespace MassTransit.AutofacIntegration
             {
                 StateMachineSagaConfiguratorCache.Configure(x, configurator, scope, name);
             });
+        }
+
+        public static void LoadStateMachineSagas(this IReceiveEndpointConfigurator configurator, IComponentContext context,
+            string name = "message")
+        {
+            var scope = context.Resolve<ILifetimeScope>();
+
+            LoadStateMachineSagas(configurator, scope, name);
         }
 
         private static Type GetArgumentType(Type serviceType)
