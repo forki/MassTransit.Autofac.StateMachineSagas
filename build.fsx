@@ -14,6 +14,7 @@ let nugetDir = currentDirectory + "/nuget/"
 let testOutputDir = currentDirectory + "/"
 
 let nugetApiKey = environVar "BAMBOO_nugetApiKey"
+let nugetPushUrl = environVarOrDefault "BAMBOO_nugetPublishUrl"
 let nugetVersion = getBuildParamOrDefault "nugetVersion" null
 
 // Filesets
@@ -45,6 +46,7 @@ Target "Push" (fun _ ->
     Push (fun p ->
         {p with
             ApiKey = nugetApiKey
+            PublishUrl = nugetPushUrl(null)
             WorkingDir = nugetDir
         })
 )
