@@ -15,7 +15,7 @@ let testOutputDir = currentDirectory + "/"
 
 let nugetApiKey = environVar "BAMBOO_nugetApiKey"
 let nugetPushUrl = environVarOrDefault "BAMBOO_nugetPublishUrl"
-let nugetVersion = getBuildParamOrDefault "NuGetVersion" null
+let nugetVersion = environVarOrDefault "BAMBOO_GitVersion_NuGetVersion"
 
 // Filesets
 let appReferences  =
@@ -56,7 +56,7 @@ Target "Pack" (fun _ ->
         {p with
             OutputPath = nugetDir
             WorkingDir = rootDir + "/src"
-            Version = nugetVersion
+            Version = nugetVersion(null)
         })
 )
 
