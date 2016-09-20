@@ -1,1 +1,3 @@
-src\packages\FAKE\tools\FAKE.exe build.fsx %*
+.paket\paket.bootstrapper.exe
+.paket\paket.exe restore
+packages\FAKE\tools\FAKE.exe build.fsx %*
