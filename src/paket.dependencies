@@ -1,9 +1,0 @@
-source https://www.nuget.org/api/v2/
-
-nuget FAKE
-nuget Autofac
-nuget MassTransit
-nuget MassTransit.Autofac
-nuget MassTransit.Automatonymous
-nuget xunit
-nuget xunit.runner.console
