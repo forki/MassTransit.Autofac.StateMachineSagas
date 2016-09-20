@@ -75,8 +75,11 @@ Target "SetVersion" (fun _ ->
     let result = ExecProcessAndReturnMessages (fun info ->
         info.FileName <- gitversion
         info.WorkingDirectory <- "."
+        info.RedirectStandardError <- true
+        info.RedirectStandardOutput <- true
         info.Arguments <- "/output json") (System.TimeSpan.FromMinutes 5.0)
 
+    Log "GitVersion: " result.Messages
     if result.ExitCode <> 0 then failwithf "'GitVersion.exe' returned with a non-zero exit code"
 
     let jsonResult = System.String.Concat(result.Messages)
