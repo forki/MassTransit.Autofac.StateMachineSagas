@@ -7,3 +7,4 @@ nuget MassTransit.Autofac
 nuget MassTransit.Automatonymous
 nuget xunit
 nuget xunit.runner.console
+nuget GitVersion.CommandLine

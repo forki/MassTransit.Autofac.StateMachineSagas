@@ -1,12 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{F068173E-EE1D-454B-BDAD-8C7E7B9D7DBE}"
 	ProjectSection(SolutionItems) = preProject
-		paket.dependencies = paket.dependencies
-		paket.lock = paket.lock
+		..\paket.dependencies = ..\paket.dependencies
+		..\paket.lock = ..\paket.lock
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransit.Autofac.StateMachineSagas", "MassTransit.Autofac.StateMachineSagas\MassTransit.Autofac.StateMachineSagas.csproj", "{5D29D78F-6087-4CBC-A81E-9D6C082DDF72}"

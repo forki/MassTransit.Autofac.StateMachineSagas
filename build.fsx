@@ -28,7 +28,8 @@ let testOutputDir = currentDirectory + "/"
 let nugetFeed = environVar "nugetPublishUrl"
 let nugetApiKey = environVar "nugetApiKey"
 
-let gitversion = environVarOrDefault "GitVersion" "gitversion.exe"
+let gitversion = "packages/GitVersion.CommandLine/tools/GitVersion.exe"
+//environVarOrDefault "GitVersion" "gitversion.exe"
 
 // Filesets
 let appReferences =
