@@ -6,10 +6,10 @@ using System.Reflection;
 [assembly: AssemblyCopyrightAttribute("Copyright © 2016 Alexey Zimarev")]
 [assembly: AssemblyVersionAttribute("3.3.0.0")]
 [assembly: AssemblyFileVersionAttribute("3.3.0.0")]
-[assembly: AssemblyInformationalVersionAttribute("3.3.0-unstable.10+Branch.develop.Sha.f724654caba6efddb9d7c63818c5b2b516776e4b")]
+[assembly: AssemblyInformationalVersionAttribute("3.3.0-unstable.11+Branch.develop.Sha.94a19d92a3e26685c3a76f5f05359c66efbe0ecf")]
 namespace System {
     internal static class AssemblyVersionInformation {
         internal const string Version = "3.3.0.0";
-        internal const string InformationalVersion = "3.3.0-unstable.10+Branch.develop.Sha.f724654caba6efddb9d7c63818c5b2b516776e4b";
+        internal const string InformationalVersion = "3.3.0-unstable.11+Branch.develop.Sha.94a19d92a3e26685c3a76f5f05359c66efbe0ecf";
     }
 }

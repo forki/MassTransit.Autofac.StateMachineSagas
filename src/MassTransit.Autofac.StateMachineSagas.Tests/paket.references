@@ -1,5 +1,6 @@
-﻿Autofac
+﻿Autofac redirects: on
 MassTransit
 MassTransit.Autofac
 MassTransit.Automatonymous
 xunit
+Newtonsoft.Json redirects: on

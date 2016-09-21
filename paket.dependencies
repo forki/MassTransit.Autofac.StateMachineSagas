@@ -8,3 +8,4 @@ nuget MassTransit.Automatonymous
 nuget xunit
 nuget xunit.runner.console
 nuget GitVersion.CommandLine
+nuget Newtonsoft.Json
