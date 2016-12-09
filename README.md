@@ -1,3 +1,8 @@
+# OBSOLETE
+This project is obsolete since MassTransit is providing similar functionality by the `MassTransit.Automatonymous.Autofac` package.
+
+https://www.nuget.org/packages/MassTransit.Automatonymous.Autofac/
+
 # MassTransit.Autofac.StateMachineSagas
 Autofac registration and configuration adapter for Automatonymous state machine Sagas
 
